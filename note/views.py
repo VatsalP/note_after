@@ -33,5 +33,4 @@ def get_note(request, id):
     except Note.DoesNotExist:
         raise Http404
     note_text = note.note
-    print(note_text)
     return render(request, 'note/note.html', {'note': note_text})
